@@ -84,6 +84,22 @@ header{
     position: absolute;
     display: block;
 }
+/*ESTILOS LOGO TEXTO HEADER*/
+.grid-container-header{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "logo texto";
+}
+.divLogo{
+    grid-area: logo;
+    text-align: center;
+}
+.texto{
+    grid-area: texto;
+}
+/*ESTILOS LOGO TEXTO HEADER*/
 p{
     padding: 1%;
     text-align: justify;
@@ -161,3 +177,26 @@ h1{
     "Texto Texto Texto Audios";
 }
 /*Contacto*/
+
+@media(max-width: 600px){
+    .nav{
+        flex-direction: column;
+    }
+    .nav li a{
+        display: block;
+    }
+    .nav li:hover ul{
+        position: relative;
+    }
+    .nav li ul a {
+        width: 90%;
+        background-color: #dada35;
+    }
+    .grid-container-header{
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "logo"
+        "texto";
+    }
+}
